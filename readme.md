@@ -227,6 +227,7 @@ a __Multi-Source Query Orchestrator__ that can intelligently search across multi
 5. __Streaming Responses__ to show "searching..." status
 
 
+```bash
 ┌─────────────────────────────────────────┐
 │         MCP Server (Your Bot)           │
 │                                         │
@@ -248,3 +249,4 @@ a __Multi-Source Query Orchestrator__ that can intelligently search across multi
 │  │Slack│Docs │ Web │ DB  │  More... │ │
 │  └─────┴─────┴─────┴─────┴──────────┘ │
 └─────────────────────────────────────────┘
+```
