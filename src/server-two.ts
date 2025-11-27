@@ -13,12 +13,12 @@ import { UserService } from "./services/UserService.js";
 // Initialize search data sources (for multi-source queries)
 const searchDataSources: IDataSource[] = [];
 
-// Add Slack if token is provided
+// Add SLACK if token is provided
 if (process.env.SLACK_TOKEN) {
   searchDataSources.push(new SlackDataSource(process.env.SLACK_TOKEN));
 }
 
-// Add Google Docs if credentials are provided
+// Add GOOGLE DOCS if credentials are provided
 if (process.env.GOOGLE_CREDENTIALS) {
   try {
     const credentials = JSON.parse(process.env.GOOGLE_CREDENTIALS);
@@ -28,7 +28,7 @@ if (process.env.GOOGLE_CREDENTIALS) {
   }
 }
 
-// Add Database if config is provided
+// Add DATABASE if config is provided
 if (process.env.DB_HOST) {
   searchDataSources.push(new DatabaseDataSource({
     host: process.env.DB_HOST,
@@ -39,7 +39,7 @@ if (process.env.DB_HOST) {
   }));
 }
 
-// Add Web Search if API key is provided
+// Add WEB Search if API key is provided
 if (process.env.GOOGLE_API_KEY) {
   searchDataSources.push(new WebSearchDataSource(process.env.GOOGLE_API_KEY));
 }
@@ -78,8 +78,7 @@ server.tool(
 
     try {
       const results = await orchestrator.search(query, (progress) => {
-        const emoji = progress.status === 'completed' ? '✅' : 
-                     progress.status === 'error' ? '❌' : '⏳';
+        const emoji = progress.status === 'completed' ? '✅' : progress.status === 'error' ? '❌' : '⏳';
         const status = `${emoji} ${progress.source}: ${progress.status}${
           progress.resultCount !== undefined ? ` (${progress.resultCount} results)` : ''
         }`;
