@@ -1,3 +1,5 @@
+### MCP
+
 __Strengths:__
 
 - Good separation of resources (read operations) and tools (write operations)
@@ -214,7 +216,7 @@ src/
 
 ### Advanced
 
-a __Multi-Source Query Orchestrator__ that can intelligently search across multiple data sources simultaneously and aggregate results. Let me show you how to architect this.
+a __Multi-Source Query Orchestrator__ that can intelligently search across multiple data sources simultaneously and aggregate results. 
 
 ## Key Concepts
 
