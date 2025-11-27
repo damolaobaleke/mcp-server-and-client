@@ -7,6 +7,8 @@
     "server:build:watch": "tsc --watch",
     "server:dev": "tsx src/server.ts",
     "server:inspect": "set DANGEROUSLY_OMIT_AUTH=true && npx @modelcontextprotocol/inspector npm run server:dev",
+    "server-two:dev": "tsx src/server-two.ts",
+    "server-two:inspect": "set DANGEROUSLY_OMIT_AUTH=true && npx @modelcontextprotocol/inspector npm run server-two:dev",
     "client:dev": "tsx src/client.ts"
   },
   "keywords": [],
@@ -23,8 +25,16 @@
     "@ai-sdk/google": "^1.2.19",
     "@inquirer/prompts": "^7.5.3",
     "@modelcontextprotocol/sdk": "^1.13.0",
+    "@slack/web-api": "^7.0.0",
     "ai": "^4.3.16",
+    "axios": "^1.6.0",
     "dotenv": "^16.5.0",
+    "googleapis": "^131.0.0",
+    "mongodb": "^6.3.0",
+    "pg": "^8.11.3",
     "zod": "^3.25.67"
+  },
+  "optionalDependencies": {
+    "@types/pg": "^8.10.9"
   }
 }

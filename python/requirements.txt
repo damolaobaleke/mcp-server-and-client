@@ -1,0 +1,15 @@
+# MCP Server Dependencies
+mcp>=1.0.0
+
+# Data Source Integrations
+slack-sdk>=3.27.0
+google-api-python-client>=2.100.0
+google-auth>=2.23.0
+psycopg2-binary>=2.9.9
+pymongo>=4.6.0
+aiohttp>=3.9.0
+
+# Utilities
+aiofiles>=23.2.1
+python-dotenv>=1.0.0
+pydantic>=2.5.0
