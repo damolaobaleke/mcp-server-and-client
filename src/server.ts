@@ -46,7 +46,7 @@ server.resource(
   "user-details",
   new ResourceTemplate("users://{userId}/profile", { list: undefined }),
   {
-    description: "Get a user's details from teh database",
+    description: "Get a user's details from the database",
     title: "User Details",
     mimeType: "application/json",
   },
@@ -214,3 +214,6 @@ async function main() {
 }
 
 main()
+
+
+// https://www.youtube.com/watch?v=ZoZxQwp1PiM&t=3743s
